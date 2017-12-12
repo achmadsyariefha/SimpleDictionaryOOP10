@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="693.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <VBox prefHeight="134.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="36.0" prefWidth="316.0">
+               <children>
+                  <Label text="Search">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="searchField" prefHeight="26.0" prefWidth="400.0">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton fx:id="RefreshBox" onAction="#refresh" style="-fx-background-color: blue;" text="Refresh" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="368.0" prefWidth="237.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" text="Add Word">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="70.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox layoutX="10.0" layoutY="102.0" prefHeight="37.0" prefWidth="237.0">
+               <children>
+                  <Label text="ID :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="id" prefHeight="26.0" prefWidth="180.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="237.0">
+               <children>
+                  <Label text="ENG :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="english" prefHeight="26.0" prefWidth="180.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="65.0" prefHeight="37.0" prefWidth="248.0">
+               <children>
+                  <Label text="IDN :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="indonesia" prefHeight="26.0" prefWidth="183.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="65.0" prefHeight="37.0" prefWidth="237.0">
+               <children>
+                  <Label text="DC">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateCreated">
+                     <HBox.margin>
+                        <Insets left="8.0" top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="176.0" prefHeight="37.0" prefWidth="237.0">
+               <children>
+                  <Label text="DM">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateModified">
+                     <HBox.margin>
+                        <Insets left="8.0" top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="162.0">
+               <children>
+                  <JFXButton fx:id="add" onAction="#addWord" style="-fx-background-color: blue;" text="Add Now!" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteButton" onAction="#deleteWord" onMouseClicked="#deleteWord" style="-fx-background-color: blue;" text="Delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="myTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idTableColumn" prefWidth="36.0" text="ID" />
+            <TableColumn fx:id="englishTableColumn" prefWidth="97.0" text="English" />
+            <TableColumn fx:id="indonesiaTableColumn" prefWidth="101.0" text="Indonesia" />
+            <TableColumn fx:id="dateCreatedTableColumn" prefWidth="111.0" text="Date Created" />
+            <TableColumn fx:id="dateModifiedTableColumn" prefWidth="110.0" text="Date Modified" />
+         </columns></TableView>
+   </center>
+</BorderPane>
